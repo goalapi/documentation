@@ -1,0 +1,46 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "GoalAPI",
+        "description": "API providing data about football competitions",
+        "termsOfService": "http://goalapi.com/content/tos.html",
+        "contact": {
+            "name": "GoalAPI Support",
+            "email": "support@goalapi.com"
+        },
+        "license": {
+            "name": "GoalAPI License",
+            "url": "http://goalapi.com/content/license.html"
+        }
+    },
+    "host": "api.goalapi.com",
+    "basePath": "/v1",
+    "schemes": [
+        "http"
+    ],
+    "consumes": [
+        "application/json"
+    ],
+    "produces": [
+        "application/json"
+    ],
+    "securityDefinitions": {
+        "api_key_in_header": {
+            "type": "apiKey",
+            "name": "X-AUTH-APIKEY",
+            "in": "header"
+        },
+        "api_key_in_query": {
+            "type": "apiKey",
+            "name": "XXX-AUTH",
+            "in": "query"
+        }
+    },
+    "security": {
+        "api_key_in_header": [],
+        "api_key_in_query": []
+    },
+    "paths": {
+    }
+}
