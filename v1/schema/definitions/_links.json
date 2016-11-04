@@ -1,0 +1,21 @@
+{
+    "_links": {
+        "type": "object",
+        "self": {
+            "$ref": "definitions/_links.json#Link",
+            "description": "A link which returns the entity itself",
+            "required": true
+        },
+        "additionalProperties": {
+            "$ref": "definitions/_links.json#Link"
+        }
+    },
+    "Link": {
+        "type": "object",
+        "href": {
+            "type": "url",
+            "description": "URL of link",
+            "required": true
+        }
+    }
+}
