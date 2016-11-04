@@ -37,10 +37,12 @@
             "in": "query"
         }
     },
-    "security": {
-        "api_key_in_header": [],
-        "api_key_in_query": []
-    },
+    "security": [
+        {
+            "api_key_in_header": [],
+            "api_key_in_query": []
+        }        
+    ],
     "paths": {
         "/": {
             "get": {
