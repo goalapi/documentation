@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "properties": {
+        "isBlocked": {
+            "type": "boolean",
+            "description": "Prohibits all operations with data for current Subscription if true"
+        },
+        "tournaments": {
+            "type": "array",
+            "items": {
+                "$ref": "TournamentBrief.json"
+            },
+            "description": "The list of tournaments available for current Subscription"
+        },
+        "expirationTime": {
+            "type": "dateTime",
+            "description": "The moment when the Subscription is no longer active"
+        }
+    }
+}

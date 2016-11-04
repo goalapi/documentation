@@ -42,5 +42,18 @@
         "api_key_in_query": []
     },
     "paths": {
+        "/": {
+            "get": {
+                "description": "Returns the current state of Subscription bound with API KEY",
+                "responses": {
+                    "200": {
+                        "description": "Subscription object",
+                        "schema": {
+                            "$ref": "definitions/Subscription.json"
+                        }
+                    }
+                }
+            }
+        }
     }
 }
