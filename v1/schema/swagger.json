@@ -58,6 +58,22 @@
                     }
                 }
             }
+        },
+        "/tournaments/": {
+            "get": {
+                "description": "Returns the list of all tournaments available for authorized Subscription",
+                "responses": {
+                    "200": {
+                        "description": "List of subscriptions",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/SubscriptionMid.json"
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }
