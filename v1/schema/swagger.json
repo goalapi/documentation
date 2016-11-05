@@ -68,7 +68,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Tournament.json#mid"
+                                "$ref": "definitions/Tournament.json#full"
                             }
                         }
                     }

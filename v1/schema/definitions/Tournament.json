@@ -19,7 +19,7 @@
             }
         }
     },
-    "mid": {
+    "full": {
         "type": "object",
         "allOf": [
             {
