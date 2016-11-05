@@ -74,6 +74,28 @@
                     }
                 }
             }
+        },
+        "/tournaments/{tournamentId}": {
+            "get": {
+                "description": "Returns Tournament",
+                "parameters": [
+                    {
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Tournament object",
+                        "schema": {
+                            "$ref": "definitions/Tournament.json#full"
+                        }
+                    }
+                }
+            }
         }
     }
 }
