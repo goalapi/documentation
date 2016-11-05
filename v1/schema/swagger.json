@@ -140,6 +140,28 @@
                     }
                 }
             }
+        },
+        "/territories/{territoryId}": {
+            "get": {
+                "description": "Returns Territory",
+                "parameters": [
+                    {
+                        "name": "territoryId",
+                        "in": "path",
+                        "description": "ID of Territory",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Territory object",
+                        "schema": {
+                            "$ref": "definitions/Territory.json#full"
+                        }
+                    }
+                }
+            }
         }
     }
 }
