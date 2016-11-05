@@ -1,0 +1,38 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "id",
+            "_links"
+        ],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Identifier of territory"
+            },
+            "name": {
+                "type": "string",
+                "description": "Title of territory"
+            },
+            "_links": {
+                "$ref": "definitions/_links.json#_links"
+            }
+        }
+    },
+    "full": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "definitions/Territory.json#brief"
+            },
+            {
+                "properties": {
+                    "parent": {
+                        "description": "The Territory which includes current one",
+                        "$ref": "definitions/Territory.json#brief"
+                    }
+                }
+            }
+        ]
+    }
+}
