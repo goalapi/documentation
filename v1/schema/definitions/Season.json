@@ -1,0 +1,32 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "_links"
+        ],
+        "properties": {
+            "name": {
+                "type": "string",
+                "description": "Title of season"
+            },
+            "_links": {
+                "$ref": "definitions/_links.json#_links"
+            }
+        }
+    },
+    "full": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "definitions/Season.json#brief"
+            },
+            {
+                "properties": {
+                    "tournament": {
+                        "$ref": "definitions/Tournament.json#brief"
+                    }
+                }
+            }
+        ]
+    }
+}
