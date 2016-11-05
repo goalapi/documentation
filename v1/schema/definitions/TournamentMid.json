@@ -3,6 +3,18 @@
     "allOf": [
         {
             "$ref": "definitions/TournamentBrief.json"
+        },
+        {
+            "properties": {
+                "teams_type": {
+                    "type": "string",
+                    "enum": [
+                        "generic",
+                        "club",
+                        "national"
+                    ]
+                }
+            }
         }
     ]
 }
