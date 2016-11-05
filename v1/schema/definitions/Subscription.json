@@ -8,7 +8,7 @@
         "tournaments": {
             "type": "array",
             "items": {
-                "$ref": "definitions/Tournament.json#brief"
+                "$ref": "Tournament.json#brief"
             },
             "description": "The list of tournaments available for current Subscription"
         },

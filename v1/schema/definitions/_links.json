@@ -2,12 +2,12 @@
     "_links": {
         "type": "object",
         "self": {
-            "$ref": "definitions/_links.json#Link",
+            "$ref": "_links.json#Link",
             "description": "A link which returns the entity itself",
             "required": true
         },
         "additionalProperties": {
-            "$ref": "definitions/_links.json#Link"
+            "$ref": "_links.json#Link"
         }
     },
     "Link": {
