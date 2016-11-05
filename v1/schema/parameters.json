@@ -1,0 +1,23 @@
+{
+    "tournamentId": {
+        "name": "tournamentId",
+        "in": "path",
+        "description": "ID of Tournament",
+        "required": true,
+        "type": "string"
+    },
+    "teamId": {
+        "name": "teamId",
+        "in": "path",
+        "description": "ID of Team",
+        "required": true,
+        "type": "string"
+    },
+    "playerId": {
+        "name": "playerId",
+        "in": "path",
+        "description": "ID of Player",
+        "required": true,
+        "type": "string"
+    }
+}

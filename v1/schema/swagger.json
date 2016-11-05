@@ -80,11 +80,7 @@
                 "description": "Returns Tournament",
                 "parameters": [
                     {
-                        "name": "tournamentId",
-                        "in": "path",
-                        "description": "ID of Tournament",
-                        "required": true,
-                        "type": "string"
+                        "$ref": "parameters.json#tournamentId"
                     }
                 ],
                 "responses": {
@@ -102,11 +98,7 @@
                 "description": "Returns Team",
                 "parameters": [
                     {
-                        "name": "teamId",
-                        "in": "path",
-                        "description": "ID of Team",
-                        "required": true,
-                        "type": "string"
+                        "$ref": "parameters.json#teamId"
                     }
                 ],
                 "responses": {
@@ -124,11 +116,7 @@
                 "description": "Returns Player",
                 "parameters": [
                     {
-                        "name": "playerId",
-                        "in": "path",
-                        "description": "ID of Player",
-                        "required": true,
-                        "type": "string"
+                        "$ref": "parameters.json#playerId"
                     }
                 ],
                 "responses": {
