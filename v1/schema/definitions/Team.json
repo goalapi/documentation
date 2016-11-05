@@ -1,0 +1,62 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "id",
+            "name",
+            "_links"
+        ],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Identifier of Team"
+            },
+            "name": {
+                "type": "string",
+                "description": "Name of Team"
+            },
+            "_links": {
+                "$ref": "definitions/_links.json#_links"
+            }
+        }
+    },
+    "full": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "definitions/Team.json#brief"
+            },
+            {
+                "properties": {
+                    "type": {
+                        "description": "Type of Team",
+                        "$ref": "definitions/Team.json#type"
+                    },
+                    "country": {
+                        "description": "Residence country of Team",
+                        "$ref": "definitions/Territory.json#brief"
+                    },
+                    "names": {
+                        "type": "object",
+                        "properties": {
+                            "full": {
+                                "type": "string"
+                            },
+                            "short": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    "type": {
+        "type": "string",
+        "enum": [
+            "generic",
+            "club",
+            "national"
+        ]
+    }
+}
