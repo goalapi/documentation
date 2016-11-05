@@ -93,6 +93,27 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/": {
+            "get": {
+                "description": "Returns array of Seasons belonging to specified Tournament",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Season",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Season.json#brief"
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
