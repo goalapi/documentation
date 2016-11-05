@@ -64,11 +64,11 @@
                 "description": "Returns the list of all tournaments available for authorized Subscription",
                 "responses": {
                     "200": {
-                        "description": "List of subscriptions",
+                        "description": "List of tournaments",
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/SubscriptionMid.json"
+                                "$ref": "definitions/Tournament.json#mid"
                             }
                         }
                     }

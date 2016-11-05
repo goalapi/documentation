@@ -1,0 +1,43 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "id",
+            "_links"
+        ],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Identifier of tournament"
+            },
+            "name": {
+                "type": "string",
+                "description": "Title of tournament"
+            },
+            "_links": {
+                "$ref": "definitions/_links.json#_links"
+            }
+        }
+    },
+    "mid": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "definitions/Tournament.json#brief"
+            },
+            {
+                "properties": {
+                    "teams_type": {
+                        "description": "Type of teams taking part in this tournament",
+                        "type": "string",
+                        "enum": [
+                            "generic",
+                            "club",
+                            "national"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
