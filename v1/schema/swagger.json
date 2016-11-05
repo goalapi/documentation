@@ -135,6 +135,54 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/": {
+            "get": {
+                "description": "Returns the array of Stages belonging to specified Season",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#seasonId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Stage objects",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Stage.json#brief"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}": {
+            "get": {
+                "description": "Returns specified Stage",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#stageId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Stage object",
+                        "schema": {
+                            "$ref": "definitions/Stage.json#full"
+                        }
+                    }
+                }
+            }
+        },
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
