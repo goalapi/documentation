@@ -28,13 +28,21 @@
             {
                 "properties": {
                     "teams_type": {
-                        "description": "Type of teams taking part in this tournament",
+                        "description": "Type of teams taking part in this Tournament",
                         "type": "string",
                         "enum": [
                             "generic",
                             "club",
                             "national"
                         ]
+                    },
+                    "coverage": {
+                        "description": "The Territory covered by this Tournament",
+                        "$ref": "definitions/Territory.json#brief"
+                    },
+                    "season": {
+                        "description": "Current active Season of this Tournament",
+                        "$ref": "definitions/Season.json#brief"
                     }
                 }
             }
