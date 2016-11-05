@@ -114,6 +114,27 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}": {
+            "get": {
+                "description": "Returns the Season",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#seasonId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Season object",
+                        "schema": {
+                            "$ref": "definitions/Season.json#full"
+                        }
+                    }
+                }
+            }
+        },
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
