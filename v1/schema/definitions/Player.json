@@ -1,0 +1,83 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "id",
+            "name",
+            "_links"
+        ],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "Identifier of Player"
+            },
+            "name": {
+                "type": "string",
+                "description": "Name of Player"
+            },
+            "_links": {
+                "$ref": "definitions/_links.json#_links"
+            }
+        }
+    },
+    "full": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "definitions/Player.json#brief"
+            },
+            {
+                "properties": {
+                    "country": {
+                        "description": "Country of Player",
+                        "$ref": "definitions/Territory.json#brief"
+                    },
+                    "names": {
+                        "type": "object",
+                        "properties": {
+                            "full": {
+                                "type": "string"
+                            },
+                            "short": {
+                                "type": "string"
+                            },
+                            "first": {
+                                "type": "string"
+                            },
+                            "second": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "bio": {
+                        "type": "object",
+                        "properties": {
+                            "birth-date": {
+                                "type": "DateTime"
+                            },
+                            "birth-country": {
+                                "type": "string"
+                            },
+                            "weight": {
+                                "type": "string"
+                            },
+                            "height": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "position": {
+                        "type": "string",
+                        "enum": [
+                            "goalkeeper",
+                            "defender",
+                            "midfielder",
+                            "forward",
+                            "player"
+                        ]
+                    }
+                }
+            }
+        ]
+    }
+}
