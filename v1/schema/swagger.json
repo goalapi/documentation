@@ -96,6 +96,50 @@
                     }
                 }
             }
+        },
+        "/teams/{teamId}": {
+            "get": {
+                "description": "Returns Team",
+                "parameters": [
+                    {
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "ID of Team",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Team object",
+                        "schema": {
+                            "$ref": "definitions/Team.json#full"
+                        }
+                    }
+                }
+            }
+        },
+        "/players/{playerId}": {
+            "get": {
+                "description": "Returns Player",
+                "parameters": [
+                    {
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "ID of Player",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Player object",
+                        "schema": {
+                            "$ref": "definitions/Player.json#full"
+                        }
+                    }
+                }
+            }
         }
     }
 }
