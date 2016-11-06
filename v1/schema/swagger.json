@@ -205,6 +205,9 @@
                             "items": {
                                 "$ref": "definitions/Match.json#/brief"
                             }
+                        },
+                        "headers": {
+                            "$ref": "pagination.json#/headers"
                         }
                     }
                 }
@@ -235,6 +238,9 @@
                             "items": {
                                 "$ref": "definitions/Match.json#/brief"
                             }
+                        },
+                        "headers": {
+                            "$ref": "pagination.json#/headers"
                         }
                     }
                 }

@@ -1,19 +1,16 @@
 {
     "headers": {
-        "type": "object",
-        "properties": {
-            "X-First-Index": {
-                "$ref": "#/definitions/item_number",
-                "description": "Indicates the index of first item in returned portion of items"
-            },
-            "X-Last-Index": {
-                "$ref": "#/definitions/item_number",
-                "description": "Indicates the index of last item in returned portion of items"
-            },
-            "X-Total-Count": {
-                "$ref": "#/definitions/item_number",
-                "description": "Indicates total number of items retrieved by request"
-            }
+        "X-First-Index": {
+            "$ref": "#/definitions/item_number",
+            "description": "Indicates the index of first item in returned portion of items"
+        },
+        "X-Last-Index": {
+            "$ref": "#/definitions/item_number",
+            "description": "Indicates the index of last item in returned portion of items"
+        },
+        "X-Total-Count": {
+            "$ref": "#/definitions/item_number",
+            "description": "Indicates total number of items retrieved by request"
         }
     },
     "definitions": {
