@@ -68,7 +68,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Tournament.json#full"
+                                "$ref": "definitions/Tournament.json#/full"
                             }
                         }
                     }
@@ -80,14 +80,14 @@
                 "description": "Returns Tournament",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "Tournament object",
                         "schema": {
-                            "$ref": "definitions/Tournament.json#full"
+                            "$ref": "definitions/Tournament.json#/full"
                         }
                     }
                 }
@@ -98,7 +98,7 @@
                 "description": "Returns array of Seasons belonging to specified Tournament",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     }
                 ],
                 "responses": {
@@ -107,7 +107,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Season.json#brief"
+                                "$ref": "definitions/Season.json#/brief"
                             }
                         }
                     }
@@ -119,17 +119,17 @@
                 "description": "Returns the Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     },
                     {
-                        "$ref": "parameters.json#seasonId"
+                        "$ref": "parameters.json#/seasonId"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "The Season object",
                         "schema": {
-                            "$ref": "definitions/Season.json#full"
+                            "$ref": "definitions/Season.json#/full"
                         }
                     }
                 }
@@ -140,10 +140,10 @@
                 "description": "Returns the array of Stages belonging to specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     },
                     {
-                        "$ref": "parameters.json#seasonId"
+                        "$ref": "parameters.json#/seasonId"
                     }
                 ],
                 "responses": {
@@ -152,7 +152,7 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Stage.json#brief"
+                                "$ref": "definitions/Stage.json#/brief"
                             }
                         }
                     }
@@ -164,20 +164,20 @@
                 "description": "Returns specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     },
                     {
-                        "$ref": "parameters.json#seasonId"
+                        "$ref": "parameters.json#/seasonId"
                     },
                     {
-                        "$ref": "parameters.json#stageId"
+                        "$ref": "parameters.json#/stageId"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "The Stage object",
                         "schema": {
-                            "$ref": "definitions/Stage.json#full"
+                            "$ref": "definitions/Stage.json#/full"
                         }
                     }
                 }
@@ -188,13 +188,13 @@
                 "description": "Returns all of Matches from specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     },
                     {
-                        "$ref": "parameters.json#seasonId"
+                        "$ref": "parameters.json#/seasonId"
                     },
                     {
-                        "$ref": "parameters.json#page"
+                        "$ref": "parameters.json#/pageNumber"
                     }
                 ],
                 "responses": {
@@ -203,11 +203,8 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Match.json#brief"
+                                "$ref": "definitions/Match.json#/brief"
                             }
-                        },
-                        "headers": {
-                            "$ref": "pagination.json#headers"
                         }
                     }
                 }
@@ -218,16 +215,16 @@
                 "description": "Returns all Matches from specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#tournamentId"
+                        "$ref": "parameters.json#/tournamentId"
                     },
                     {
-                        "$ref": "parameters.json#seasonId"
+                        "$ref": "parameters.json#/seasonId"
                     },
                     {
-                        "$ref": "parameters.json#stageId"
+                        "$ref": "parameters.json#/stageId"
                     },
                     {
-                        "$ref": "parameters.json#page"
+                        "$ref": "parameters.json#/pageNumber"
                     }
                 ],
                 "responses": {
@@ -236,11 +233,8 @@
                         "schema": {
                             "type": "array",
                             "items": {
-                                "$ref": "definitions/Match.json#brief"
+                                "$ref": "definitions/Match.json#/brief"
                             }
-                        },
-                        "headers": {
-                            "$ref": "pagination.json#headers"
                         }
                     }
                 }
@@ -251,14 +245,14 @@
                 "description": "Returns Team",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#teamId"
+                        "$ref": "parameters.json#/teamId"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "Team object",
                         "schema": {
-                            "$ref": "definitions/Team.json#full"
+                            "$ref": "definitions/Team.json#/full"
                         }
                     }
                 }
@@ -269,14 +263,14 @@
                 "description": "Returns Player",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#playerId"
+                        "$ref": "parameters.json#/playerId"
                     }
                 ],
                 "responses": {
                     "200": {
                         "description": "Player object",
                         "schema": {
-                            "$ref": "definitions/Player.json#full"
+                            "$ref": "definitions/Player.json#/full"
                         }
                     }
                 }
@@ -296,9 +290,9 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "Territory object",
+                        "description": "",
                         "schema": {
-                            "$ref": "definitions/Territory.json#full"
+                            "$ref": "definitions/Territory.json#/full"
                         }
                     }
                 }

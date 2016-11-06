@@ -16,7 +16,7 @@
                 "description": "Name of Team"
             },
             "_links": {
-                "$ref": "_links.json#_links"
+                "$ref": "_links.json#/_links"
             }
         }
     },
@@ -24,17 +24,17 @@
         "type": "object",
         "allOf": [
             {
-                "$ref": "Team.json#brief"
+                "$ref": "Team.json#/brief"
             },
             {
                 "properties": {
                     "type": {
                         "description": "Type of Team",
-                        "$ref": "Team.json#type"
+                        "$ref": "#/type"
                     },
                     "country": {
                         "description": "Residence country of Team",
-                        "$ref": "Territory.json#brief"
+                        "$ref": "Territory.json#/brief"
                     },
                     "names": {
                         "type": "object",

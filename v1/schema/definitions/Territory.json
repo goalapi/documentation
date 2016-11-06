@@ -15,7 +15,8 @@
                 "description": "Title of territory"
             },
             "_links": {
-                "$ref": "_links.json#_links"
+
+                "$ref": "_links.json#/_links"
             }
         }
     },
@@ -23,13 +24,12 @@
         "type": "object",
         "allOf": [
             {
-                "$ref": "Territory.json#brief"
+                "$ref": "#/brief"
             },
             {
                 "properties": {
                     "parent": {
-                        "description": "The Territory which includes current one",
-                        "$ref": "Territory.json#brief"
+                        "$ref": "Territory.json#/brief"
                     }
                 }
             }

@@ -15,7 +15,7 @@
                 "description": "Title of tournament"
             },
             "_links": {
-                "$ref": "_links.json#_links"
+                "$ref": "_links.json#/_links"
             }
         }
     },
@@ -23,21 +23,21 @@
         "type": "object",
         "allOf": [
             {
-                "$ref": "Tournament.json#brief"
+                "$ref": "#/brief"
             },
             {
                 "properties": {
                     "teams_type": {
                         "description": "Type of teams taking part in this Tournament",
-                        "$ref": "Team.json#type"
+                        "$ref": "Team.json#/type"
                     },
                     "coverage": {
                         "description": "The Territory covered by this Tournament",
-                        "$ref": "Territory.json#brief"
+                        "$ref": "Territory.json#/brief"
                     },
                     "season": {
                         "description": "Current active Season of this Tournament",
-                        "$ref": "Season.json#brief"
+                        "$ref": "Season.json#/brief"
                     }
                 }
             }

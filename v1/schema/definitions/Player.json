@@ -16,7 +16,7 @@
                 "description": "Name of Player"
             },
             "_links": {
-                "$ref": "_links.json#_links"
+                "$ref": "_links.json#/_links"
             }
         }
     },
@@ -24,13 +24,13 @@
         "type": "object",
         "allOf": [
             {
-                "$ref": "Player.json#brief"
+                "$ref": "#/brief"
             },
             {
                 "properties": {
                     "country": {
                         "description": "Country of Player",
-                        "$ref": "Territory.json#brief"
+                        "$ref": "Territory.json#/brief"
                     },
                     "names": {
                         "type": "object",
@@ -53,7 +53,8 @@
                         "type": "object",
                         "properties": {
                             "birth-date": {
-                                "type": "DateTime"
+                                "type": "string",
+                                "format": "date-time"
                             },
                             "birth-country": {
                                 "type": "string"

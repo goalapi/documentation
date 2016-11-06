@@ -10,7 +10,7 @@
                 "description": "Title of season"
             },
             "_links": {
-                "$ref": "_links.json#_links"
+                "$ref": "_links.json#/_links"
             }
         }
     },
@@ -18,12 +18,12 @@
         "type": "object",
         "allOf": [
             {
-                "$ref": "Season.json#brief"
+                "$ref": "#/brief"
             },
             {
                 "properties": {
                     "tournament": {
-                        "$ref": "Tournament.json#brief"
+                        "$ref": "Tournament.json#/brief"
                     }
                 }
             }

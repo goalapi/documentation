@@ -8,12 +8,13 @@
         "tournaments": {
             "type": "array",
             "items": {
-                "$ref": "Tournament.json#brief"
+                "$ref": "Tournament.json#/brief"
             },
             "description": "The list of tournaments available for current Subscription"
         },
         "expirationTime": {
-            "type": "dateTime",
+            "type": "string",
+            "format": "date-time",
             "description": "The moment when the Subscription is no longer active"
         }
     }

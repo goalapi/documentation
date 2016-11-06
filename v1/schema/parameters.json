@@ -34,7 +34,8 @@
         "required": true,
         "type": "string"
     },
-    "page": {
+    "pageNumber": {
+        "required": true,
         "name": "page",
         "in": "path",
         "description": "page number for items which requires pagination",
