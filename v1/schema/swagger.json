@@ -183,6 +183,69 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/matches/{page}/": {
+            "get": {
+                "description": "Returns all of Matches from specified Season",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Match objects",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Match.json#brief"
+                            }
+                        },
+                        "headers": {
+                            "$ref": "pagination.json#headers"
+                        }
+                    }
+                }
+            }
+        },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}/matches/{page}/": {
+            "get": {
+                "description": "Returns all Matches from specified Stage",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#stageId"
+                    },
+                    {
+                        "$ref": "parameters.json#page"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Match objects",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Match.json#brief"
+                            }
+                        },
+                        "headers": {
+                            "$ref": "pagination.json#headers"
+                        }
+                    }
+                }
+            }
+        },
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
