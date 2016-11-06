@@ -33,5 +33,14 @@
         "description": "ID of Player",
         "required": true,
         "type": "string"
+    },
+    "page": {
+        "name": "page",
+        "in": "path",
+        "description": "page number for items which requires pagination",
+        "type": "integer",
+        "format": "int32",
+        "minimum": 1,
+        "default": 1
     }
 }
