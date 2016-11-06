@@ -1,0 +1,39 @@
+{
+    "brief": {
+        "type": "object",
+        "required": [
+            "id",
+            "_links"
+        ],
+        "properties": {
+            "id": {
+                "type": "string",
+                "description": "ID of Match"
+            },
+            "_links": {
+                "$ref": "_links.json#_links"
+            }
+        }
+    },
+    "full": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "Match.json#brief"
+            },
+            {
+                "properties": {
+                    "tournament": {
+                        "$ref": "Tournament.json#brief"
+                    },
+                    "season": {
+                        "$ref": "Season.json#brief"
+                    },
+                    "stage": {
+                        "$ref": "Stage.json#brief"
+                    }
+                }
+            }
+        ]
+    }
+}
