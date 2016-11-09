@@ -1,0 +1,61 @@
+{
+    "status": {
+        "type": "object",
+        "required": [
+            "status"
+        ],
+        "properties": {
+            "status": {
+                "description": "This field indicates current state of the Match",
+                "type": "string",
+                "enum": [
+                    "scheduled",
+                    "online",
+                    "finished",
+                    "postponed",
+                    "canceled",
+                    "interrupted"
+                ]
+            },
+            "score": {
+                "description": "This field displays score of the Match",
+                "type": "array",
+                "items": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "minItems": 2,
+                "maxItems": 2
+            },
+            "period": {
+                "$ref": "#/period"
+            },
+            "finished_after": {
+                "description": "If Match is finished, this field indicates after which period it finished",
+                "$ref": "#/period"
+            },
+            "reason": {
+                "description": "If Match is canceled, postponed or interrupted this field indicates the reason of abnormal Match flow",
+                "type": "string"
+            },
+            "period_finish_time": {
+                "description": "If Match is online, indicates the moment when current period supposed to be finished. Since we know the duration length of each period, it allows to determine current minute",
+                "$ref": "DateTime.json"
+            }
+        }
+    },
+    "period": {
+        "type": "string",
+        "description": "Indicates the period of Match",
+        "enum": [
+            "1T",
+            "HT",
+            "2T",
+            "ET",
+            "E1T",
+            "EHT",
+            "E2T",
+            "PS"
+        ]
+    }
+}
