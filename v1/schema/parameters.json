@@ -34,6 +34,13 @@
         "required": true,
         "type": "string"
     },
+    "matchId": {
+        "name": "matchId",
+        "in": "path",
+        "description": "ID of Match",
+        "required": true,
+        "type": "string"
+    },
     "pageNumber": {
         "required": true,
         "name": "page",

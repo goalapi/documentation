@@ -213,6 +213,30 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/matches/{matchId}": {
+            "get": {
+                "description": "Returns full details of Particular Match",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#/matchId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Match objects",
+                        "schema": {
+                            "$ref": "definitions/Match.json#/full"
+                        }
+                    }
+                }
+            }
+        },
         "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}/matches/{page}/": {
             "get": {
                 "description": "Returns all Matches from specified Stage",
@@ -246,6 +270,34 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}/matches/{matchId}": {
+            "get": {
+                "description": "Returns full details of Particular Match",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#/stageId"
+                    },
+                    {
+                        "$ref": "parameters.json#/matchId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Match objects",
+                        "schema": {
+                            "$ref": "definitions/Match.json#/full"
+                        }
+                    }
+                }
+            }
+        },
+
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
