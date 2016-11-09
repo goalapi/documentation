@@ -194,7 +194,24 @@
                             }
                         },
                         "headers": {
-                            "$ref": "pagination.json#/headers"
+                            "X-First-Index": {
+                                "description": "Indicates the index of first item in returned portion of items",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            },
+                            "X-Last-Index": {
+                                "description": "Indicates the index of last item in returned portion of items",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            },
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
                         }
                     }
                 }
@@ -251,7 +268,24 @@
                             }
                         },
                         "headers": {
-                            "$ref": "pagination.json#/headers"
+                            "X-First-Index": {
+                                "description": "Indicates the index of first item in returned portion of items",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            },
+                            "X-Last-Index": {
+                                "description": "Indicates the index of last item in returned portion of items",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            },
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
                         }
                     }
                 }
