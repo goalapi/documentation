@@ -102,9 +102,17 @@
                                     }
                                 }
                             ]
+
                         },
                         "minItems": 2,
                         "maxItems": 2
+                    },
+                    "events": {
+                        "description": "Array of Events happened in this match",
+                        "type": "array",
+                        "items": {
+                            "$ref": "Event.json"
+                        }
                     }
                 }
             }
