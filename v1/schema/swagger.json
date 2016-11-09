@@ -46,19 +46,6 @@
         }
     ],
     "paths": {
-        "/": {
-            "get": {
-                "description": "Returns the current state of Subscription bound with API KEY",
-                "responses": {
-                    "200": {
-                        "description": "Subscription object",
-                        "schema": {
-                            "$ref": "definitions/Subscription.json"
-                        }
-                    }
-                }
-            }
-        },
         "/tournaments/": {
             "get": {
                 "description": "Returns the list of all tournaments available for authorized Subscription",
