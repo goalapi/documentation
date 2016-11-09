@@ -113,6 +113,47 @@
                         "items": {
                             "$ref": "Event.json"
                         }
+                    },
+                    "penalty_shootout": {
+                        "description": "Details of penalty shootout (if takes place in Match)",
+                        "type": "object",
+                        "required": [
+                            "score"
+                        ],
+                        "properties": {
+                            "score": {
+                                "description": "The Score of penalty shootout",
+                                "$ref": "MatchStatus.json#/definitions/score"
+                            },
+                            "kicks": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "required": [
+                                        "player",
+                                        "team"
+                                    ],
+                                    "properties": {
+                                        "team": {
+                                            "description": "The Team kicking the penalty",
+                                            "$ref": "Team.json#/brief"
+                                        },
+                                        "player": {
+                                            "description": "The Player kicking the penalty",
+                                            "$ref": "Player.json#/brief"
+                                        },
+                                        "score": {
+                                            "description": "The Score after this kick",
+                                            "$ref": "MatchStatus.json#/definitions/score"
+                                        },
+                                        "missed": {
+                                            "description": "True if kick is missed",
+                                            "type": "boolean"
+                                        }
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }
