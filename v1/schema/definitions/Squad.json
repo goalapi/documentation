@@ -1,0 +1,32 @@
+{
+    "players": {
+        "type": "array",
+        "items": {
+            "$ref": "#/player"
+        }
+    },
+    "player": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "Player.json#/brief"
+            },
+            {
+                "properties": {
+                    "captain": {
+                        "description": "Indicates if current Player is a captain of team",
+                        "type": "boolean"
+                    },
+                    "number": {
+                        "description": "Shirt number of player",
+                        "type": "string"
+                    },
+                    "position": {
+                        "description": "Position of Player on pitch",
+                        "$ref": "Player.json#/definitions/position"
+                    }
+                }
+            }
+        ]
+    }
+}
