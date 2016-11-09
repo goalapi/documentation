@@ -68,17 +68,22 @@
                         }
                     },
                     "position": {
-                        "type": "string",
-                        "enum": [
-                            "goalkeeper",
-                            "defender",
-                            "midfielder",
-                            "forward",
-                            "player"
-                        ]
+                        "$ref": "#/definitions/position"
                     }
                 }
             }
         ]
+    },
+    "definitions": {
+        "position": {
+            "type": "string",
+            "enum": [
+                "goalkeeper",
+                "defender",
+                "midfielder",
+                "forward",
+                "player"
+            ]
+        }
     }
 }
