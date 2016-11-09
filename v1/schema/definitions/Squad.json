@@ -1,4 +1,29 @@
 {
+    "team": {
+        "type": "object",
+        "allOf": [
+            {
+                "$ref": "Team.json#/brief"
+            },
+            {
+                "properties": {
+                    "tournament": {
+                        "$ref": "Tournament.json#/brief"
+                    },
+                    "season": {
+                        "$ref": "Season.json#/brief"
+                    },
+                    "stage": {
+                        "$ref": "Stage.json#/brief"
+                    },
+                    "players": {
+                        "description": "Players of Team played in specified Season or Stage",
+                        "$ref": "#/players"
+                    }
+                }
+            }
+        ]
+    },
     "players": {
         "type": "array",
         "items": {

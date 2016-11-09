@@ -297,6 +297,108 @@
                 }
             }
         },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/teams/": {
+            "get": {
+                "description": "Returns list of teams taking part in specified Season",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The list of Team objects",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Team.json#/brief"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}/teams/": {
+            "get": {
+                "description": "Returns list of teams taking part in specified Stage",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#/stageId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The list of Team objects",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Team.json#/brief"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/teams/{teamId}": {
+            "get": {
+                "description": "Returns the Team details related to specified Season",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#/teamId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Squad objects",
+                        "schema": {
+                            "$ref": "definitions/Squad.json#/team"
+                        }
+                    }
+                }
+            }
+        },
+        "/tournaments/{tournamentId}/seasons/{seasonId}/stages/{stageId}/teams/{teamId}": {
+            "get": {
+                "description": "Returns the Team details related to specified Stage",
+                "parameters": [
+                    {
+                        "$ref": "parameters.json#/tournamentId"
+                    },
+                    {
+                        "$ref": "parameters.json#/seasonId"
+                    },
+                    {
+                        "$ref": "parameters.json#/stageId"
+                    },
+                    {
+                        "$ref": "parameters.json#/teamId"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "The Squad objects",
+                        "schema": {
+                            "$ref": "definitions/Squad.json#/team"
+                        }
+                    }
+                }
+            }
+        },
 
         "/teams/{teamId}": {
             "get": {
