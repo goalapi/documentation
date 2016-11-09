@@ -28,11 +28,11 @@
                 "maxItems": 2
             },
             "period": {
-                "$ref": "#/period"
+                "$ref": "#/definitions/period"
             },
             "finished_after": {
                 "description": "If Match is finished, this field indicates after which period it finished",
-                "$ref": "#/period"
+                "$ref": "#/definitions/period"
             },
             "reason": {
                 "description": "If Match is canceled, postponed or interrupted this field indicates the reason of abnormal Match flow",
@@ -44,18 +44,20 @@
             }
         }
     },
-    "period": {
-        "type": "string",
-        "description": "Indicates the period of Match",
-        "enum": [
-            "1T",
-            "HT",
-            "2T",
-            "ET",
-            "E1T",
-            "EHT",
-            "E2T",
-            "PS"
-        ]
+    "definitions": {
+        "period": {
+            "type": "string",
+            "description": "Indicates the period of Match",
+            "enum": [
+                "1T",
+                "HT",
+                "2T",
+                "ET",
+                "E1T",
+                "EHT",
+                "E2T",
+                "PS"
+            ]
+        }
     }
 }
