@@ -10,6 +10,58 @@
                 "type": "string",
                 "description": "ID of Match"
             },
+            "begin_time": {
+                "description": "This field displays the moment when the Match is supposed to start accordingly to competition schedule",
+                "$ref": "DateTime.json"
+            },
+            "last_update_time": {
+                "description": "This field shows the moment of last update for this Match",
+                "$ref": "DateTime.json"
+            },
+            "status": {
+                "$ref": "MatchStatus.json#/status"
+            },
+            "tournament": {
+                "$ref": "Tournament.json#/brief"
+            },
+            "season": {
+                "$ref": "Season.json#/brief"
+            },
+            "stage": {
+                "$ref": "Stage.json#/brief"
+            },
+            "context": {
+                "type": "object",
+                "properties": {
+                    "matchday": {
+                        "type": "string",
+                        "description": "Match-day number"
+                    },
+                    "group": {
+                        "type": "string",
+                        "description": "The group name for group stage matches"
+                    },
+                    "round": {
+                        "type": "string",
+                        "description": "Competition round inside playoff stages"
+                    },
+                    "final": {
+                        "type": "integer",
+                        "description": "More formal value for playoff round (1 - means Final, 2 - Semi-final, 3 - Match for third place, 4 - Quarter-final, and so on...)"
+                    },
+                    "additionalProperties": {
+                        "type": "string"
+                    }
+                }
+            },
+            "teams": {
+                "type": "array",
+                "items": {
+                    "$ref": "Team.json#/brief"
+                },
+                "minItems": 2,
+                "maxItems": 2
+            },
             "_links": {
                 "$ref": "_links.json#/_links"
             }
@@ -23,15 +75,6 @@
             },
             {
                 "properties": {
-                    "tournament": {
-                        "$ref": "Tournament.json#/brief"
-                    },
-                    "season": {
-                        "$ref": "Season.json#/brief"
-                    },
-                    "stage": {
-                        "$ref": "Stage.json#/brief"
-                    }
                 }
             }
         ]
