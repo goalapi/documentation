@@ -75,6 +75,37 @@
             },
             {
                 "properties": {
+                    "teams": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "allOf": [
+                                {
+                                    "$ref": "Team.json#/brief"
+                                },
+                                {
+                                    "properties": {
+                                        "squad": {
+                                            "description": "This field contains info about Players taking part in the Match",
+                                            "type": "object",
+                                            "properties": {
+                                                "eleven": {
+                                                    "description": "Starting 11 players of team in Match",
+                                                    "$ref": "Squad.json#/players"
+                                                },
+                                                "substitutions": {
+                                                    "description": "Substitution players",
+                                                    "$ref": "Squad.json#/players"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            ]
+                        },
+                        "minItems": 2,
+                        "maxItems": 2
+                    }
                 }
             }
         ]
