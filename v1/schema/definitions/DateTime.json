@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "required": [
+        "date_time",
+        "timestamp"
+    ],
+    "properties": {
+        "date_time": {
+            "type": "string",
+            "format": "date-time"
+        },
+        "timestamp": {
+            "type": "integer",
+            "format": "int64"
+        }
+    }
+}
