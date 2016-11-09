@@ -19,13 +19,7 @@
             },
             "score": {
                 "description": "This field displays score of the Match",
-                "type": "array",
-                "items": {
-                    "type": "integer",
-                    "minimum": 0
-                },
-                "minItems": 2,
-                "maxItems": 2
+                "$ref": "#/definitions/score"
             },
             "period": {
                 "$ref": "#/definitions/period"
@@ -58,6 +52,15 @@
                 "E2T",
                 "PS"
             ]
+        },
+        "score": {
+            "type": "array",
+            "items": {
+                "type": "integer",
+                "minimum": 0
+            },
+            "minItems": 2,
+            "maxItems": 2
         }
     }
 }
