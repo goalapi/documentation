@@ -30,7 +30,7 @@
                 "properties": {
                     "type": {
                         "description": "Type of Team",
-                        "$ref": "#/type"
+                        "$ref": "#/definitions/type"
                     },
                     "country": {
                         "description": "Residence country of Team",
@@ -51,12 +51,14 @@
             }
         ]
     },
-    "type": {
-        "type": "string",
-        "enum": [
-            "generic",
-            "club",
-            "national"
-        ]
+    "definitions": {
+        "type": {
+            "type": "string",
+            "enum": [
+                "generic",
+                "club",
+                "national"
+            ]
+        }
     }
 }

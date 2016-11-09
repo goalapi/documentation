@@ -29,7 +29,7 @@
                 "properties": {
                     "teams_type": {
                         "description": "Type of teams taking part in this Tournament",
-                        "$ref": "Team.json#/type"
+                        "$ref": "Team.json#/definitions/type"
                     },
                     "coverage": {
                         "description": "The Territory covered by this Tournament",
