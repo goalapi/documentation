@@ -67,7 +67,11 @@
                 "description": "Returns Tournament",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -85,7 +89,11 @@
                 "description": "Returns array of Seasons belonging to specified Tournament",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -106,10 +114,18 @@
                 "description": "Returns the Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -127,10 +143,18 @@
                 "description": "Returns the array of Stages belonging to specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -151,13 +175,25 @@
                 "description": "Returns specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -175,13 +211,28 @@
                 "description": "Returns all of Matches from specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/pageNumber"
+                        "required": true,
+                        "name": "page",
+                        "in": "path",
+                        "description": "page number for items which requires pagination",
+                        "type": "integer",
+                        "format": "int32",
+                        "minimum": 1,
+                        "default": 1
                     }
                 ],
                 "responses": {
@@ -222,13 +273,25 @@
                 "description": "Returns full details of Particular Match",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/matchId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -246,16 +309,35 @@
                 "description": "Returns all Matches from specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/pageNumber"
+                        "required": true,
+                        "name": "page",
+                        "in": "path",
+                        "description": "page number for items which requires pagination",
+                        "type": "integer",
+                        "format": "int32",
+                        "minimum": 1,
+                        "default": 1
                     }
                 ],
                 "responses": {
@@ -296,16 +378,32 @@
                 "description": "Returns full details of Particular Match",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/matchId"
+                        "name": "matchId",
+                        "in": "path",
+                        "description": "ID of Match",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -323,10 +421,18 @@
                 "description": "Returns list of teams taking part in specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -347,13 +453,25 @@
                 "description": "Returns list of teams taking part in specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -374,13 +492,25 @@
                 "description": "Returns the Team details related to specified Season",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/teamId"
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "ID of Team",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -398,16 +528,32 @@
                 "description": "Returns the Team details related to specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/teamId"
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "ID of Team",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -425,13 +571,25 @@
                 "description": "Returns the Standings Tables if they exist for specified Stage",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/tournamentId"
+                        "name": "tournamentId",
+                        "in": "path",
+                        "description": "ID of Tournament",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/seasonId"
+                        "name": "seasonId",
+                        "in": "path",
+                        "description": "ID of Season",
+                        "required": true,
+                        "type": "string"
                     },
                     {
-                        "$ref": "parameters.json#/stageId"
+                        "name": "stageId",
+                        "in": "path",
+                        "description": "ID of Stage",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -551,7 +709,11 @@
                 "description": "Returns Team",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/teamId"
+                        "name": "teamId",
+                        "in": "path",
+                        "description": "ID of Team",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
@@ -569,7 +731,11 @@
                 "description": "Returns Player",
                 "parameters": [
                     {
-                        "$ref": "parameters.json#/playerId"
+                        "name": "playerId",
+                        "in": "path",
+                        "description": "ID of Player",
+                        "required": true,
+                        "type": "string"
                     }
                 ],
                 "responses": {
