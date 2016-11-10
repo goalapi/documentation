@@ -1,11 +1,31 @@
 {
     "type": "object",
     "properties": {
-        "isBlocked": {
+        "_links": {
+            "$ref": "_links.json#/_links"
+        },
+        "apikey_md5": {
+            "description": "MD5 encrypted API key",
+            "type": "string"
+        },
+        "status": {
+            "description": "OK means that this subscription is active, other statuses means some problems",
+            "type": "string",
+            "enum": [
+                "ok",
+                "blocked",
+                "expired"
+            ]
+        },
+        "hasAccessToAllTournaments": {
+            "type": "boolean",
+            "description": "If true and status is OK, then this subscription has access to all available Tournaments"
+        },
+        "blocked": {
             "type": "boolean",
             "description": "Prohibits all operations with data for current Subscription if true"
         },
-        "tournaments": {
+        "allowedTournaments": {
             "type": "array",
             "items": {
                 "$ref": "Tournament.json#/brief"
