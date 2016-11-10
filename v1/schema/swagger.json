@@ -300,9 +300,9 @@
                         "type": "string"
                     },
                     {
-                        "name": "stageId",
+                        "name": "matchId",
                         "in": "path",
-                        "description": "ID of Stage",
+                        "description": "ID of Match",
                         "required": true,
                         "type": "string"
                     }
