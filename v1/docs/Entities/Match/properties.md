@@ -9,6 +9,7 @@ This will explain meaning and usage of Match properties
 1. [Teams Lineups](#teams-lineups) 
 1. [Match Context](#match-context) 
 1. [Match Events](#match-events) 
+1. [Penalty Shootout](#penalty-shootout) 
 
 
 ### Begin Time
@@ -214,6 +215,7 @@ Depending on state of Match, `status` field it may have different set of propert
     - `goal`
     - `card`
     - `substituion`
+    - `penalty_missed`
     
   - `team` - the Team which player(s) caused this event
   - `moment` - moment of Match when event happened
@@ -457,3 +459,248 @@ Depending on state of Match, `status` field it may have different set of propert
  }
  ```
 
+### Penalty Shootout
+
+Matches with penalty shootout series will have additional attribute `penalty_shootout` which stores an object with tow fields: `score` and `kicks`. 
+ - `score` - is score of penalty shootout
+ - `kicks` - is an array of items representing info about each kick; if kick is missed - it will have additional attribute `"missed": true` 
+
+**Example:**
+
+```json
+{
+"penalty_shootout": {
+        "score": [
+            3,
+            2
+        ],
+        "kicks": [
+            {
+                "team": {
+                    "id": "bra_nat",
+                    "name": "Brazil",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/bra_nat"
+                        }
+                    }
+                },
+                "player": {
+                    "id": "luiz-david",
+                    "name": "Luiz David",
+                    "_links": {
+                        "self": {
+                            "href": "/players/luiz-david"
+                        }
+                    }
+                },
+                "score": [
+                    1,
+                    0
+                ]
+            },
+            {
+                "team": {
+                    "id": "chl_nat",
+                    "name": "Chile",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/chl_nat"
+                        }
+                    }
+                },
+                "missed": true,
+                "player": {
+                    "id": "pinilla-mauricio",
+                    "name": "Pinilla Mauricio",
+                    "_links": {
+                        "self": {
+                            "href": "/players/pinilla-mauricio"
+                        }
+                    }
+                }
+            },
+            {
+                "team": {
+                    "id": "bra_nat",
+                    "name": "Brazil",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/bra_nat"
+                        }
+                    }
+                },
+                "missed": true,
+                "player": {
+                    "id": "willian",
+                    "name": "Willian",
+                    "_links": {
+                        "self": {
+                            "href": "/players/willian"
+                        }
+                    }
+                }
+            },
+            {
+                "team": {
+                    "id": "chl_nat",
+                    "name": "Chile",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/chl_nat"
+                        }
+                    }
+                },
+                "missed": true,
+                "player": {
+                    "id": "sanchez-alexis",
+                    "name": "Sanchez Alexis",
+                    "_links": {
+                        "self": {
+                            "href": "/players/sanchez-alexis"
+                        }
+                    }
+                }
+            },
+            {
+                "team": {
+                    "id": "bra_nat",
+                    "name": "Brazil",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/bra_nat"
+                        }
+                    }
+                },
+                "player": {
+                    "id": "marcelo",
+                    "name": "Marcelo",
+                    "_links": {
+                        "self": {
+                            "href": "/players/marcelo"
+                        }
+                    }
+                },
+                "score": [
+                    2,
+                    0
+                ]
+            },
+            {
+                "team": {
+                    "id": "chl_nat",
+                    "name": "Chile",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/chl_nat"
+                        }
+                    }
+                },
+                "player": {
+                    "id": "aranguiz-charles",
+                    "name": "Aranguiz Charles",
+                    "_links": {
+                        "self": {
+                            "href": "/players/aranguiz-charles"
+                        }
+                    }
+                },
+                "score": [
+                    2,
+                    1
+                ]
+            },
+            {
+                "team": {
+                    "id": "bra_nat",
+                    "name": "Brazil",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/bra_nat"
+                        }
+                    }
+                },
+                "missed": true,
+                "player": {
+                    "id": "hulk",
+                    "name": "Hulk",
+                    "_links": {
+                        "self": {
+                            "href": "/players/hulk"
+                        }
+                    }
+                }
+            },
+            {
+                "team": {
+                    "id": "chl_nat",
+                    "name": "Chile",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/chl_nat"
+                        }
+                    }
+                },
+                "player": {
+                    "id": "diaz-marcelo",
+                    "name": "Diaz Marcelo",
+                    "_links": {
+                        "self": {
+                            "href": "/players/diaz-marcelo"
+                        }
+                    }
+                },
+                "score": [
+                    2,
+                    2
+                ]
+            },
+            {
+                "team": {
+                    "id": "bra_nat",
+                    "name": "Brazil",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/bra_nat"
+                        }
+                    }
+                },
+                "player": {
+                    "id": "neymar",
+                    "name": "Neymar",
+                    "_links": {
+                        "self": {
+                            "href": "/players/neymar"
+                        }
+                    }
+                },
+                "score": [
+                    3,
+                    2
+                ]
+            },
+            {
+                "team": {
+                    "id": "chl_nat",
+                    "name": "Chile",
+                    "_links": {
+                        "self": {
+                            "href": "/teams/chl_nat"
+                        }
+                    }
+                },
+                "missed": true,
+                "player": {
+                    "id": "jara-gonzalo",
+                    "name": "Jara Gonzalo",
+                    "_links": {
+                        "self": {
+                            "href": "/players/jara-gonzalo"
+                        }
+                    }
+                }
+            }
+        ]
+    }
+}
+```
