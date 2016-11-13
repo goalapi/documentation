@@ -4,7 +4,7 @@ This describes API-calls to fetch Matches
 1. [List Matches from particular Season or Stage](#list-matches-from-particular-season-or-stage)
 1. [Get Match by ID](#get-match-by-id)
 1. [List online Matches](#list-online-matches)
-1. [Match properties explained](/MatchProperties.md#match-properties-explained)
+1. [Match properties explained](Match/properties.md#match-properties-explained)
 
 ## List Matches from particular Season or Stage
 
