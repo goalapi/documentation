@@ -63,6 +63,7 @@ X-API-Version: 1
 We tried to implement some Hypermedia linking in our API. In accordance with [HAL approach](http://blog.stateless.co/post/13296666138/json-linking-with-hal), each entity in GoalAPI responses contains **_links** attribute which contains link to entity itself and also may contain links to related objects. 
 
 ```json
+    {
         "tournament": {
             "id": "hrv_2h",
             "name": "2 Hnl",
@@ -72,6 +73,7 @@ We tried to implement some Hypermedia linking in our API. In accordance with [HA
                 }
             }
         }
+    }
 ```
 
 ### Trailing slashes in URI path
