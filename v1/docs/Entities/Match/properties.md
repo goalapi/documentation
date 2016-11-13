@@ -7,6 +7,8 @@ This will explain meaning and usage of Match properties
 1. [Match status](#match-status) 
 1. [Teams](#teams) 
 1. [Teams Lineups](#teams-lineups) 
+1. [Match Context](#match-context) 
+1. [Match Events](#match-events) 
 
 
 ### Begin Time
@@ -170,4 +172,288 @@ Depending on state of Match, `status` field it may have different set of propert
         ]
     }
   ```
-  
+
+### Match Context
+ The `context` field contains some Match attributes linking it to different competition parts, which competition divided to inside the Stage. 
+ It can be `group` for group stage or `zone` for competitions with geographical conferences and anything else.  
+ 
+ **Example:**
+ ```json
+ {
+    "id": "07ca0d9c08b31c9a1783cee266836a25",
+    "begin_time": {
+        "date_time": "2016-08-13T11:30:00+00:00",
+        "timestamp": 1471087800
+    },
+    "season": {
+        "name": "Premier League 2016/2017",
+        "_links": {
+            "self": {
+                "href": "/tournaments/eng_pl/seasons/20162017"
+            }
+        }
+    },
+    "stage": {
+        "name": "Main",
+        "_links": {
+            "self": {
+                "href": "/tournaments/eng_pl/seasons/20162017/stages/main"
+            }
+        }
+    },
+    "context": {
+         "matchday": "Round 1"
+    }
+ }
+ 
+ ```
+ 
+### Match Events
+ The `events` field contains array of `Event` objects. Each `Event` can have following fields: 
+  - `type` - the type of event; following types are possible:
+    - `goal`
+    - `card`
+    - `substituion`
+    
+  - `team` - the Team which player(s) caused this event
+  - `moment` - moment of Match when event happened
+  - `player` - Player caused this Event
+  - `players` - two players for Substitution event    
+  - `color` - card type for yellow or red card events; card color can be 
+      - `yellow`
+      - `red`
+      - `yellow_red`
+
+ **Example:**
+ ```json
+ {
+    "events": [
+        {
+            "type": "card",
+            "team": {
+                "id": "lei_eng",
+                "name": "Leicester",
+                "_links": {
+                    "self": {
+                        "href": "/teams/lei_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "1T",
+                "moment": {
+                    "minute": 29
+                }
+            },
+            "color": "yellow",
+            "player": {
+                "id": "fuchs-christian",
+                "name": "Fuchs Christian",
+                "_links": {
+                    "self": {
+                        "href": "/players/fuchs-christian"
+                    }
+                }
+            }
+        },
+        {
+            "type": "card",
+            "team": {
+                "id": "lei_eng",
+                "name": "Leicester",
+                "_links": {
+                    "self": {
+                        "href": "/teams/lei_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "1T",
+                "moment": {
+                    "minute": 33
+                }
+            },
+            "color": "yellow",
+            "player": {
+                "id": "simpson-danny",
+                "name": "Simpson Danny",
+                "_links": {
+                    "self": {
+                        "href": "/players/simpson-danny"
+                    }
+                }
+            }
+        },
+        {
+            "type": "goal",
+            "team": {
+                "id": "hulcit_eng",
+                "name": "Hull City",
+                "_links": {
+                    "self": {
+                        "href": "/teams/hulcit_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "1T",
+                "moment": {
+                    "minute": 46
+                }
+            },
+            "player": {
+                "id": "diomande-adama",
+                "name": "Diomande Adama",
+                "_links": {
+                    "self": {
+                        "href": "/players/diomande-adama"
+                    }
+                }
+            },
+            "score": [
+                1,
+                0
+            ]
+        },
+        {
+            "type": "goal",
+            "team": {
+                "id": "lei_eng",
+                "name": "Leicester",
+                "_links": {
+                    "self": {
+                        "href": "/teams/lei_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "2T",
+                "moment": {
+                    "minute": 47
+                }
+            },
+            "player": {
+                "id": "mahrez-riyad",
+                "name": "Mahrez Riyad",
+                "_links": {
+                    "self": {
+                        "href": "/players/mahrez-riyad"
+                    }
+                }
+            },
+            "score": [
+                1,
+                1
+            ]
+        },
+        {
+            "type": "goal",
+            "team": {
+                "id": "hulcit_eng",
+                "name": "Hull City",
+                "_links": {
+                    "self": {
+                        "href": "/teams/hulcit_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "2T",
+                "moment": {
+                    "minute": 57
+                }
+            },
+            "player": {
+                "id": "snodgrass-robert",
+                "name": "Snodgrass Robert",
+                "_links": {
+                    "self": {
+                        "href": "/players/snodgrass-robert"
+                    }
+                }
+            },
+            "score": [
+                2,
+                1
+            ]
+        },
+        {
+            "type": "substitution",
+            "team": {
+                "id": "lei_eng",
+                "name": "Leicester",
+                "_links": {
+                    "self": {
+                        "href": "/teams/lei_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "2T",
+                "moment": {
+                    "minute": 68
+                }
+            },
+            "players": {
+                "in": {
+                    "id": "okazaki-shinji",
+                    "name": "Okazaki Shinji",
+                    "_links": {
+                        "self": {
+                            "href": "/players/okazaki-shinji"
+                        }
+                    }
+                },
+                "out": {
+                    "id": "gray-demarai",
+                    "name": "Gray Demarai",
+                    "_links": {
+                        "self": {
+                            "href": "/players/gray-demarai"
+                        }
+                    }
+                }
+            }
+        },
+        {
+            "type": "substitution",
+            "team": {
+                "id": "lei_eng",
+                "name": "Leicester",
+                "_links": {
+                    "self": {
+                        "href": "/teams/lei_eng"
+                    }
+                }
+            },
+            "moment": {
+                "period": "2T",
+                "moment": {
+                    "minute": 68
+                }
+            },
+            "players": {
+                "in": {
+                    "id": "amartey-daniel",
+                    "name": "Amartey Daniel",
+                    "_links": {
+                        "self": {
+                            "href": "/players/amartey-daniel"
+                        }
+                    }
+                },
+                "out": {
+                    "id": "king-andy",
+                    "name": "King Andy",
+                    "_links": {
+                        "self": {
+                            "href": "/players/king-andy"
+                        }
+                    }
+                }
+            }
+        }
+    ]    
+ }
+ ```
+
