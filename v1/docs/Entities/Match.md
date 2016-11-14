@@ -15,7 +15,7 @@ GET /v1/tournaments/:tournamentId/seasons/:seasonId/stages/:stageId/matches/:pag
 
 Lists all matches from Season or Stage specified in path. These API-calls returns array of items, each item represents summary of Match. Summaries DO NOT include info about Teams Lineups and Match Events (like goals, cards, etc...).
 
-### Example
+**Example:**
 ```
 $ curl -i 'http://api.goalapi.com/v1/tournaments/eng_pl/seasons/20162017/matches/1/' -H "X-AUTH-APIKEY: xxx-xxxx-xxx"
 
@@ -203,7 +203,7 @@ GET /tournaments/:tournamentId/seasons/:seasonId/stages/:stageId/matches/:matchI
 
 Returns one Match by **matchId** from Season or Stage specified in path. These API-calls return one Match with full details i.e with Events and Team lineups if available.  
 
-### Example
+**Example:**
 ```
 $ curl -i  'http://api.goalapi.com/v1/tournaments/eng_pl/seasons/20162017/matches/a2febee5b50e835c9efd14952bb8206f' -H "X-AUTH-APIKEY: xxx-xxxx-xxx"
 
@@ -1087,7 +1087,7 @@ Lists Matches which are online now, supposed to start within next several minute
 Matches are taken from Tournaments available for Subscription identified by API-key passed with the request. 
 This API-call returns matches with all details including Events and Lineups. 
 
-### Example
+**Example:**
 ```
 $ curl -i 'http://api.goalapi.com/v1/matches/now/' -H "X-AUTH-APIKEY: xxx-xxxx-xxx"
 
