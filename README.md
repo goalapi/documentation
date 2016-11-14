@@ -293,7 +293,9 @@ Content-Type: application/json
 ```
 
 ## Pagination
-Some of requests designed to return arrays of items and sometimes they would have to return too many items. In order to reduce possible heaviness of such requests we added pagination. Paginated responses contains some additional fields in header: _Link_, _X-Total-Count_, _X-First-Index_, _X-Last-Index_. 
+Some of requests designed to return arrays of items and sometimes they would have to return too many items. 
+In order to reduce possible heaviness of such requests we added pagination. 
+Paginated responses contains some additional fields in header: _Link_, _X-Total-Count_, _X-First-Index_, _X-Last-Index_. 
 
 ```
 $ curl -i  'http://api.goalapi.com/v1/tournaments/eng_pl/seasons/20162017/matches/2/' -H "X-AUTH-APIKEY: xxx-xxxx-xxx"

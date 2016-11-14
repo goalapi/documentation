@@ -2,6 +2,7 @@
 This describes API-calls to fetch Matches
 
 1. [List Matches from particular Season or Stage](#list-matches-from-particular-season-or-stage)
+    - [Pagination](#matches-pagination)
 1. [Get Match by ID](#get-match-by-id)
 1. [List online Matches](#list-online-matches)
 1. [Match properties explained](Match/properties.md#match-properties-explained)
@@ -193,6 +194,29 @@ Link: </v1/tournaments/eng_pl/seasons/20162017/matches/>; rel="prev",  </v1/tour
     }
 ]
 ```
+### Matches pagination
+Matches API-calls designed to return arrays of items and they have to return too many items. 
+In order to reduce possible heaviness of such requests we added pagination. 
+This means that each API-call for List of Matches must have `page` parameter in the end of URI path 
+
+```
+$ curl -i  'http://api.goalapi.com/v1/tournaments/eng_pl/seasons/20162017/matches/2/' -H "X-AUTH-APIKEY: xxx-xxxx-xxx"
+
+HTTP/1.1 200 OK
+Content-Type: application/json
+X-Total-Count: 380
+X-First-Index: 128
+X-Last-Index: 255
+Link: </v1/tournaments/eng_pl/seasons/20162017/matches/1/>; rel="prev",  </v1/tournaments/eng_pl/seasons/20162017/matches/3/>; rel="next"
+```
+
+Paginated responses contains additional fields in header: `Link`, `X-Total-Count`, `X-First-Index`, `X-Last-Index`. 
+ 
+ * `Link` contains list of links which must be used to access next or previous pages
+ * `X-Total-Count` - is a maximum number Matches inside specified Season or Stage
+ * `X-First-Index` - numeric index of first item in current portion of Matches
+ * `X-Last-Index` - numeric index of last item in current portion of Matches
+
 
 ## Get Match by ID
 
