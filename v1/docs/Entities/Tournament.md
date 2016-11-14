@@ -1,10 +1,10 @@
 # Matches
 This describes API-calls to fetch data about Tournaments current Subscription has access to  
 
-1. [List all Tournaments available for current API-key](#list-matches-from-particular-season-or-stage)
+1. [List all Tournaments available for current API-key](#list-all-tournaments-available-for-current-api-key)
 1. [Get Tournament by ID](#get-tournament-by-id)
-1. [Tournament properties explained](#get-tournament-by-id)
-1. [Get Matches and other data from Tournament](#list-online-matches)
+1. [Tournament properties explained](#tournament-properties-explained)
+1. [Get Matches and other data from Tournament](#get-matches-and-other-data-from-tournament)
 
 ## List all Tournaments available for current API-key
 
