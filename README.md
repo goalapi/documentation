@@ -5,14 +5,17 @@ The OpenAPI (swagger) specification [is here](v1/schema/swagger.json)
 
 # GoalAPI Service Overview 
 
-1.  [Current version](#current-version)
-1.  [Schema](#schema)
-1.  [Authentication](#authentication) 
-1.  [Root endpoint](#root-endpoint) 
-1.  [HTTP Redirects](#http-redirects) 
-1.  [Error responses](#error-responses)
-1.  [Pagination](#pagination)
-1.  [Working with Matches](v1/docs/Entities/Match.md)
+1. [Current version](#current-version)
+1. [Schema](#schema)
+1. [Authentication](#authentication) 
+1. [Root endpoint](#root-endpoint) 
+1. [HTTP Redirects](#http-redirects) 
+1. [Error responses](#error-responses)
+1. [Pagination](#pagination)
+1. API-calls reference
+   * [Matches](v1/docs/Entities/Match.md)
+   * [Tournaments](v1/docs/Entities/Tournament.md)
+   * [Seasons and Stages](v1/docs/Entities/Seasons&Stages.md)
 
 ## Current version
 By default, all requests receive the **v1** version of the API. We encourage you to explicitly request this version specifying /v1 endpoint after hostname.
