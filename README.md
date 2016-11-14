@@ -12,7 +12,7 @@ The OpenAPI (swagger) specification [is here](v1/schema/swagger.json)
 1. [HTTP Redirects](#http-redirects) 
 1. [Error responses](#error-responses)
 1. [Pagination](#pagination)
-1. API-calls reference
+1. [API-calls reference](v1/docs/api-calls.md)
    * [Matches](v1/docs/Entities/Match.md)
    * [Tournaments](v1/docs/Entities/Tournament.md)
    * [Seasons and Stages](v1/docs/Entities/Seasons&Stages.md)
