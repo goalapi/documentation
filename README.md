@@ -1,7 +1,12 @@
 
 # GoalAPI-v1 specification
+
 This is entry point for documentation for GoalAPI.com REST API version 1.0 in human readable format.  
-The OpenAPI (swagger) specification [is here](v1/schema/swagger.json)
+
+More formal API-calls reference [is here](v1/docs/api-calls.md).
+
+The OpenAPI (swagger) specification [is here](v1/schema/swagger.json).
+
 
 # GoalAPI Service Overview 
 
@@ -12,7 +17,7 @@ The OpenAPI (swagger) specification [is here](v1/schema/swagger.json)
 1. [HTTP Redirects](#http-redirects) 
 1. [Error responses](#error-responses)
 1. [Pagination](#pagination)
-1. [How To](v1/docs/api-calls.md)
+1. How To's
    * [Matches](v1/docs/howto/Match.md)
    * [Tournaments](v1/docs/howto/Tournament.md)
    * [Seasons and Stages](v1/docs/howto/Seasons&Stages.md)
