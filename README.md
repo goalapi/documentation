@@ -12,10 +12,10 @@ The OpenAPI (swagger) specification [is here](v1/schema/swagger.json)
 1. [HTTP Redirects](#http-redirects) 
 1. [Error responses](#error-responses)
 1. [Pagination](#pagination)
-1. [API-calls reference](v1/docs/api-calls.md)
-   * [Matches](v1/docs/Entities/Match.md)
-   * [Tournaments](v1/docs/Entities/Tournament.md)
-   * [Seasons and Stages](v1/docs/Entities/Seasons&Stages.md)
+1. [How To](v1/docs/api-calls.md)
+   * [Matches](v1/docs/howto/Match.md)
+   * [Tournaments](v1/docs/howto/Tournament.md)
+   * [Seasons and Stages](v1/docs/howto/Seasons&Stages.md)
 
 ## Current version
 By default, all requests receive the **v1** version of the API. We encourage you to explicitly request this version specifying /v1 endpoint after hostname.
