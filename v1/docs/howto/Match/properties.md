@@ -95,7 +95,7 @@ Depending on state of Match, `status` field it may have different set of propert
 
 ### Teams Lineups
  In the cases when Match object contains full representation, it must contain info about teams lineups . 
- Lineups added as additional `squad` field to each team in `field`. `Squad` fields have 2 fields: `eleven` - array of 
+ Lineups added as additional `squad` field to each team in `Teams` field. `Squad` fields have 2 fields: `eleven` - array of 
  players which starts the match on pitch and `substitutions` - array of substitution players.  
 
  **Example:**
