@@ -23,6 +23,8 @@ API-calls is another name for requests which clients made to our API via HTTP
 * [/teams/:teamId](#team)
 * [/players/:playerId](#player)
 * [/territories/:territoryId](#territory) 
+* [/updates/](#updates)
+* [/updates/:dataType/](#updates-by-data-types)
 
 
 ## Root 
@@ -328,3 +330,39 @@ API-calls is another name for requests which clients made to our API via HTTP
 **Output:** [Territory object](./definitions/Territory.md#full)
 
 **Read more:** [Example](./examples/GetTerritoryByID.md)
+
+
+## Updates
+```
+    GET /updates/?goalapi_notification_timestamp=:timestamp
+```
+**Description:** Returns Matches updated today. 
+Also this API-call checks for updates on data of other types (Standings, Teams, etc..) happened since _goalapi_notification_timestamp_. 
+Links for updated data receiving are put to Link header of response. 
+
+**Input parameters:** 
+
+   - `goalapi_notification_timestamp` -  Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to _goalapi_notification_timestamp_
+      
+**Output:** Array of [Match objects](./definitions/Match.md)
+
+**Read more:** [How to work with Updates](./howto/Updates.md)
+
+
+## Updates by Data Types
+```
+    GET /updates/:dataType/?goalapi_notification_timestamp=:timestamp
+```
+**Description:** Returns array of Matches or Standings or Teams or Tournaments or Seasons or Stages updated since _goalapi_notification_timestamp_ 
+This API-call returns 128 items maximum, to get all results client must follow "next" link in _Link_ header of response 
+
+**Input parameters:** 
+   - `dataType` - One of `matches`, `standings`, `teams`, `tournaments`, `seasons`, `stages`
+   - `goalapi_notification_timestamp` -  Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to _goalapi_notification_timestamp_
+      
+**Output:** Array of [Match objects](./definitions/Match.md) or [StandingsTable objects](./definitions/StandingsTable.md) 
+or [Team objects](./definitions/Team.md) or [Tournament objects](./definitions/Tournament.md) 
+or [Season objects](./definitions/Season.md) or [Stage objects](./definitions/Stage.md)
+
+**Read more:** [How to work with Updates](./howto/Updates.md)
+
