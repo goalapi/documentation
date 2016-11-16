@@ -618,6 +618,244 @@
                 }
             }
         },
+        "/updates/": {
+            "get": {
+                "description": "Returns Matches updated today. Checks for updates on other data happened since goalapi_notification_timestamp and puts links to updated data to Link header of response ",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Match items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Match.json#/full"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/matches/": {
+            "get": {
+                "description": "Returns Matches updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Match items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Match.json#/full"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/standings/": {
+            "get": {
+                "description": "Returns Standings Tables updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Standings Table items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/StandingsTable.json"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/teams/": {
+            "get": {
+                "description": "Returns Teams updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Team items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Team.json#/brief"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/tournaments/": {
+            "get": {
+                "description": "Returns Tournaments updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Tournament items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Tournament.json#/brief"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/seasons/": {
+            "get": {
+                "description": "Returns Seasons updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Season items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Season.json#/brief"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/updates/stages/": {
+            "get": {
+                "description": "Returns Stages updated since goalapi_notification_timestamp",
+                "parameters": [
+                    {
+                        "name": "goalapi_notification_timestamp",
+                        "in": "query",
+                        "description": "Timestamp value. This API-call returns all items with lastUpdateTime greater than or equal to goalapi_notification_timestamp",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Array of Stage items",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "definitions/Stage.json#/brief"
+                            }
+                        },
+                        "headers": {
+                            "X-Total-Count": {
+                                "description": "Indicates total number of items retrieved by request",
+                                "type": "integer",
+                                "format": "int32",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        },
         "/teams/{teamId}": {
             "get": {
                 "description": "Returns Team",
