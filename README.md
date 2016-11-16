@@ -21,6 +21,7 @@ The OpenAPI (swagger) specification [is here](v1/schema/swagger.json).
    * [Matches](v1/docs/howto/Match.md)
    * [Tournaments](v1/docs/howto/Tournament.md)
    * [Seasons and Stages](v1/docs/howto/Seasons&Stages.md)
+   * [How process data updates](v1/docs/howto/Updates.md)
 
 ## Current version
 By default, all requests receive the **v1** version of the API. We encourage you to explicitly request this version specifying /v1 endpoint after hostname.
