@@ -1,0 +1,102 @@
+{
+    "type": "object",
+    "required": [
+        "id",
+        "tournament",
+        "season",
+        "stage",
+        "rows"
+    ],
+    "properties": {
+        "tournament": {
+            "$ref": "Tournament.json#/brief"
+        },
+        "season": {
+            "$ref": "Season.json#/brief"
+        },
+        "stage": {
+            "$ref": "Stage.json#/brief"
+        },
+        "context": {
+            "type": "object",
+            "properties": {
+                "group": {
+                    "type": "string",
+                    "description": "The group name for group stage standings"
+                },
+                "zone": {
+                    "type": "string",
+                    "description": "The name of Zone if exists"
+                },
+                "additionalProperties": {
+                    "type": "string"
+                }
+            }
+        },
+        "rows": {
+            "description": "List of Standings Table Rows representing results of the Team",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": [
+                    "team",
+                    "position",
+                    "points",
+                    "matches",
+                    "goals"
+                ],
+                "properties": {
+                    "team": {
+                        "description": "The Team represented by current row",
+                        "$ref": "Team.json#/brief"
+                    },
+                    "position": {
+                        "description": "Position of Team in ranking",
+                        "type": "integer",
+                        "minimum": 1
+                    },
+                    "points": {
+                        "description": "Number of points earned by Team",
+                        "type": "integer"
+                    },
+                    "matches": {
+                        "description": "Displays how Team played in specified Stage",
+                        "type": "object",
+                        "properties": {
+                            "played": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "won": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "draw": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "lost": {
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        }
+                    },
+                    "goals": {
+                        "description": "Displays number of goals scored by/against this Team in specified Stage",
+                        "type": "object",
+                        "properties": {
+                            "scored": {
+                                "type": "integer",
+                                "minimum": 0
+                            },
+                            "conceded": {
+                                "type": "integer",
+                                "minimum": 0
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
