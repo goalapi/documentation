@@ -95,7 +95,7 @@ Depending on state of Match, `status` field it may have different set of propert
 
 ### Teams Lineups
  In the cases when Match object contains full representation, it must contain info about teams lineups . 
- Lineups added as additional `squad` field to each team in `Teams` field. `Squad` fields have 2 fields: `eleven` - array of 
+ Lineups added as additional `squad` field to each team in `Teams` field. `Squad` fields have 2 fields: `elntn` - array of 
  players which starts the match on pitch and `substitutions` - array of substitution players.  
 
  **Example:**
@@ -243,9 +243,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "1T",
-                "moment": {
-                    "minute": 29
-                }
+                "minute": 29
             },
             "color": "yellow",
             "player": {
@@ -271,9 +269,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "1T",
-                "moment": {
-                    "minute": 33
-                }
+                "minute": 33
             },
             "color": "yellow",
             "player": {
@@ -299,9 +295,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "1T",
-                "moment": {
-                    "minute": 46
-                }
+                "minute": 46
             },
             "player": {
                 "id": "diomande-adama",
@@ -330,9 +324,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 47
-                }
+                "minute": 47
             },
             "player": {
                 "id": "mahrez-riyad",
@@ -361,9 +353,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 57
-                }
+                "minute": 57
             },
             "player": {
                 "id": "snodgrass-robert",
@@ -392,9 +382,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 68
-                }
+                "minute": 68
             },
             "players": {
                 "in": {
@@ -430,9 +418,7 @@ Depending on state of Match, `status` field it may have different set of propert
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 68
-                }
+                "minute": 68
             },
             "players": {
                 "in": {

@@ -709,9 +709,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "1T",
-                "moment": {
-                    "minute": 9
-                }
+                "minute": 9
             },
             "player": {
                 "id": "capoue-etienne",
@@ -740,9 +738,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 55
-                }
+                "minute": 55
             },
             "players": {
                 "in": {
@@ -778,9 +774,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 58
-                }
+                "minute": 58
             },
             "player": {
                 "id": "redmond-nathan",
@@ -809,9 +803,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 60
-                }
+                "minute": 60
             },
             "color": "yellow",
             "player": {
@@ -837,9 +829,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 64
-                }
+                "minute": 64
             },
             "players": {
                 "in": {
@@ -875,9 +865,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 73
-                }
+                "minute": 73
             },
             "players": {
                 "in": {
@@ -913,9 +901,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 76
-                }
+                "minute": 76
             },
             "color": "red",
             "player": {
@@ -941,9 +927,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 80
-                }
+                "minute": 80
             },
             "players": {
                 "in": {
@@ -979,9 +963,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 81
-                }
+                "minute": 81
             },
             "players": {
                 "in": {
@@ -1017,9 +999,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 83
-                }
+                "minute": 83
             },
             "players": {
                 "in": {
@@ -1055,9 +1035,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 87
-                }
+                "minute": 87
             },
             "color": "yellow",
             "player": {
@@ -1083,9 +1061,7 @@ X-API-Version: 1
             },
             "moment": {
                 "period": "2T",
-                "moment": {
-                    "minute": 94
-                }
+                "minute": 94
             },
             "color": "yellow",
             "player": {
@@ -2139,9 +2115,7 @@ X-Total-Count:4
                 },
                 "moment": {
                     "period": "1T",
-                    "moment": {
-                        "minute": 25
-                    }
+                    "minute": 25
                 },
                 "player": {
                     "id": "seoane-fernando",
