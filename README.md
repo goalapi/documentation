@@ -93,7 +93,7 @@ We strongly encourage our clients use these links instead of composing API-calls
 Trailing slash must present in path if client requests the list of items i.e. the server will return the array. If client needs details of one item, he must send request without trailing slash in URI path. 
 ```
 /v1/tournaments/ucl/seasons/ #returns [array of items]
-v1/players/bjarnason-aron #returns {one item}
+/v1/players/bjarnason-aron #returns {one item}
 ```
 
 If client requests particular item, trailing slash will cause `400 Bad Request - Wrong path` error response. 
