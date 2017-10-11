@@ -5,6 +5,7 @@ This will explain meaning and usage of Match properties
 
 1. [Begin time](#begin-time) 
 1. [Match status](#match-status) 
+1. [Current minute of live Match](#current-minute-of-live-match) 
 1. [Teams](#teams) 
 1. [Teams Lineups](#teams-lineups) 
 1. [Match Context](#match-context) 
@@ -61,6 +62,26 @@ Depending on state of Match, `status` field it may have different set of propert
     since we know the duration length of each period, it allows to determine current minute;
  - `finished_after` - indicates the last period of finished Match
  - `reason` - contains description of reason of abnormal flow for _postponed_, _canceled_ and _interrupted_ Matches
+
+### Current minute of live Match
+ Current minute is not provided explicitly as a property of live Match object. API consumers are offered to calculate
+it on their end using `period_finish_time` field of Match `status`. 
+The simple formula for current minute calculation is as follows:
+```
+   current_minute_of_match = last_minute_of_current_period - Math.floor((period_finish_timestamp - current_timestamp)/60)
+``` 
+where `current_timestamp` is a [Unix Timestamp](https://en.wikipedia.org/wiki/Unix_time) of current moment,
+`period_finish_timestamp` is a Unix Timestamp of moment when current period is supposed to finish,
+`Math.floor` - is something like [JavaScript Math.floor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) 
+function,
+`last_minute_of_current_period` - is a number indicating final minute for current period; it's different for each period of Match:
+   - 45 for `1T`
+   - 90 for `2T`
+   - 105 for `E1T`
+   - 120 for `ET` and `E2T`
+   
+The minute must not be calculated for all other periods of Match
+
    
 ### Teams
 
