@@ -318,7 +318,7 @@ Link: </v1/tournaments/eng_pl/seasons/20162017/matches/1/>; rel="prev",  </v1/to
 ```
 
 ### Link header
-The pagination info is included in the Link header. 
+The pagination info is included in the Link header: 
 ```
 Link: </v1/tournaments/eng_pl/seasons/20162017/matches/1/>; rel="prev",  </v1/tournaments/eng_pl/seasons/20162017/matches/3/>; rel="next"
 ```
